@@ -6,8 +6,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, InputGroup, FormControl, Button, Row, Card} from 'react-bootstrap';
 
 
-const CLIENT_ID='cdc34b97d148422fbd627cd24ca7ba2c';
-const CLIENT_SECRET ='4f337e6a87af436696126dc6645f4b63';
+const CLIENT_ID: string='cdc34b97d148422fbd627cd24ca7ba2c';
+const CLIENT_SECRET: string ='4f337e6a87af436696126dc6645f4b63';
+
+type AppProps ={
+  searchInput: string,
+  accessToken: string,
+  albums: [],
+  name: string,
+  images: string[]
+  
+
+}
 
 function App() {
   const [searchInput, setSearchInput] = useState("");
@@ -31,10 +41,7 @@ function App() {
 
   //Search
   async function search() {
-    console.log("Search for "+ searchInput);
-
     //Get request using search to get the Artist ID
-
     var searchParameters ={
       method: 'GET',
       headers:{
@@ -79,9 +86,9 @@ function App() {
           {albums.map(album=>{
             return(
               <Card>
-              <Card.Img src={album.images[0].url} />
+              <Card.Img src={album['images'][0]['url']} />
               <Card.Body>
-                <Card.Title>{album.name}</Card.Title>
+                <Card.Title>{album['name']}</Card.Title>
               </Card.Body>
             </Card> 
             )
