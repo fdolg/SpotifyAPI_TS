@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 
-const CLIENT_ID='cdc34b97d148422fbd627cd24ca7ba2c';
-const CLIENT_SECRET ='4f337e6a87af436696126dc6645f4b63';
+
 const [searchInput, setSearchInput] = useState("");
 const [accessToken, setAccessToken] = useState("");
 const [albums, setAlbums] = useState([]);
