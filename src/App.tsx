@@ -6,8 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, InputGroup, FormControl, Button, Row, Card} from 'react-bootstrap';
 
 
-const CLIENT_ID='cdc34b97d148422fbd627cd24ca7ba2c';
-const CLIENT_SECRET ='4f337e6a87af436696126dc6645f4b63';
+
 
 function App() {
   const [searchInput, setSearchInput] = useState("");
